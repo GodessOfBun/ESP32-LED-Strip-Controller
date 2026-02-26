@@ -1,4 +1,5 @@
-## Introduction:
+## Introduction:<img width="1843" height="1543" alt="front_3D" src="https://github.com/user-attachments/assets/0ce40065-ffe4-4ef1-ae28-ccc8754a1a7a" />
+
 This ESP32-C2 Based board is designed to control up to 5 channels of an LED Strip. Each channel is in theory capable of 4A up to 24V with the total current drawn from the board not exceeding 5A. Although in theory there isn't much preventing it from more current other than eFuse FET RdsOn (150mOhm~) and trace width and the bulk capacitor.
 eFuse can be skipped by shorting the VIN to EFUSE to the output with a wire.
 
