@@ -1,11 +1,15 @@
 ## Introduction:<img width="1843" height="1543" alt="front_3D" src="https://github.com/user-attachments/assets/0ce40065-ffe4-4ef1-ae28-ccc8754a1a7a" />
 
-This ESP32-C2 Based board is designed to control up to 5 channels of an LED Strip. Each channel is in theory capable of 4A up to 24V with the total current drawn from the board not exceeding 5A. Although in theory there isn't much preventing it from more current other than eFuse FET RdsOn (150mOhm~) and trace width and the bulk capacitor.
+This ESP32-C2 Based board is designed to control up to 5 channels of an LED Strip. Each channel is in theory capable of 4A up to 24V with the total current drawn from the board not exceeding 5A. Although in theory there isn't much preventing it from reaching 8A current(eFuse max) other than trace width and the bulk capacitor and so on.
+Mosfet remains below 50c with a 99% duty cycle at 2.4A/24v @ 25KHz in testing. In theory, according to my calculations, it can easily handle 4A or even 4.5A/5A. above 4A is not recommended.
+
+Measured Channel FET rise time: 12.5ns.
+
 eFuse can be skipped by shorting the VIN to EFUSE to the output with a wire.
 
-The board is designed for 30KHz in mind but can be used with a lower or higher frequency.
+The board is designed for 25KHz in mind but can be used with a lower or higher frequency within reason.
 
-You can leave unused channnels empty. 
+You can leave unused channnels empty and not solder them to save on cost. 
 
 The EFUSE is connfigured to be triggered at 5.51A. It features a 150ms-300ms~ soft-start to prevent sparks when connecting the power.
 
