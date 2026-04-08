@@ -4997,7 +4997,7 @@
 	)
 	(text "LDO regulator OUTPUT: 9.23v\nuse R6= 500R for 9.5V\nMin dropout is 2.5v"
 		(exclude_from_sim no)
-		(at 359.664 70.866 0)
+		(at 342.138 82.042 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5005,15 +5005,25 @@
 		)
 		(uuid "0baa802e-4591-440e-b741-3076f03b801f")
 	)
-	(text "5 Channel LED Driver\n30kHz frequency to avoid headaches and audiable noise."
+	(text "5 channel LED driver designed for\n26kHz frequency to avoid headaches and audiable noise."
 		(exclude_from_sim no)
-		(at 348.488 244.094 0)
+		(at 352.552 250.19 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "185b0d7d-d743-4e3d-8d03-91ab3b5c5601")
+	)
+	(text "ESP32-C2 has internal EN/BOOT Capcaitor and \npull-up therefore, it's not required"
+		(exclude_from_sim no)
+		(at 148.844 103.886 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "32460b06-bbb9-4820-8b97-a1ac74b07f95")
 	)
 	(text "Step-Down regulator OUTPUT: 3.3V\n14-11uH calculated, 8.2uH recommended. 700ma peak\nC14 could be 47-200pF"
 		(exclude_from_sim no)
@@ -5035,9 +5045,9 @@
 		)
 		(uuid "59dc1933-971b-42ea-8665-f2ccd7c8f632")
 	)
-	(text "(30kHz)\n"
+	(text "(25KHz)\n"
 		(exclude_from_sim no)
-		(at 335.788 257.048 0)
+		(at 345.186 257.048 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5055,9 +5065,9 @@
 		)
 		(uuid "888123ec-67f6-4bcd-a4f2-7b5c279f4e57")
 	)
-	(text "2024/June/24 1:30AM\n"
+	(text "2024/June/24 1:30AM | 2026/FEB/28 1.0 "
 		(exclude_from_sim no)
-		(at 344.17 280.67 0)
+		(at 354.584 280.162 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5065,9 +5075,9 @@
 		)
 		(uuid "9053cdfa-836f-4ef8-9bb3-40c3fe49bcd8")
 	)
-	(text "RGBWW LED Driver."
+	(text "RGBWW ESP32 LED Driver."
 		(exclude_from_sim no)
-		(at 318.008 260.35 0)
+		(at 322.58 260.35 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -5085,7 +5095,7 @@
 		)
 		(uuid "b6b8ca49-dfa2-4e6c-bd95-2498560c09d8")
 	)
-	(text "0.2\n"
+	(text "1.0\n"
 		(exclude_from_sim no)
 		(at 393.7 280.162 0)
 		(effects
@@ -8401,6 +8411,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 81.28) (xy 118.11 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b93238b4-2f2c-4d53-b076-34a764abb985")
+	)
+	(wire
+		(pts
 			(xy 27.94 41.91) (xy 27.94 45.72)
 		)
 		(stroke
@@ -8838,6 +8858,16 @@
 			(type default)
 		)
 		(uuid "d72d937a-9579-40ce-8e86-de0bad19aa47")
+	)
+	(wire
+		(pts
+			(xy 118.11 81.28) (xy 118.11 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d776117a-f4a1-440b-bdf5-881f92b59f5b")
 	)
 	(wire
 		(pts
@@ -10201,7 +10231,7 @@
 			)
 		)
 		(property "Value" "B5819WS"
-			(at 216.662 68.326 90)
+			(at 216.408 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12237,6 +12267,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 118.11 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "39d083d8-7a9d-4fe7-8118-0edc3a5dfae2")
+		(property "Reference" "#PWR038"
+			(at 118.11 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 118.11 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 118.11 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a4efe07-ede4-4b70-8b6c-d5806f528dc5")
+		)
+		(instances
+			(project "Esp32_Lightcontroller"
+				(path "/9cc69c82-50fe-4eb8-b2e4-2a78f104345b"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Zener_Small")
 		(at 271.78 31.75 270)
 		(unit 1)
@@ -14260,7 +14357,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "P18"
+		(property "Value" "D18"
 			(at 127.254 92.456 90)
 			(effects
 				(font
@@ -18927,6 +19024,106 @@
 			(project ""
 				(path "/9cc69c82-50fe-4eb8-b2e4-2a78f104345b"
 					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 116.84 81.28 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c53a8e87-abb5-4677-ae7c-b9fe148371ae")
+		(property "Reference" "TP7"
+			(at 114.046 83.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 110.49 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 116.84 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 116.84 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" ""
+			(at 116.84 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 116.84 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 116.84 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b04e419d-9f31-4f00-ae78-d6c99df5956d")
+		)
+		(instances
+			(project "Esp32_Lightcontroller"
+				(path "/9cc69c82-50fe-4eb8-b2e4-2a78f104345b"
+					(reference "TP7")
 					(unit 1)
 				)
 			)
